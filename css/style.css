@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    margin-top: 15vh;
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 15px 20px;
+    border: 0px;
+    box-shadow: 0px 0px 10px 0.5px #ccc;
+    border-radius: 15px;
+}
+
+fieldset .inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+
+.inputs input[type="text"] {
+    margin-bottom: 35px;
+    width: 22vw;
+    border: 0px;
+    border-bottom: 2px solid #aaa;
+    outline: 0;
+    padding: 5px;
+    transition: all ease 0.5s;
+    font-size: 12px;
+}
+
+.inputs input[type="text"]::placeholder {
+    font-size: 12px;
+    position: absolute;
+}
+
+.inputs input[type="text"]:focus {
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #6eb9c6, #7687c6, #8d4ca6);
+}
+
+input[type="button"] {
+    border-radius: 20px;
+    padding: 12px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #27ccfd, #b620fe);
+    border: 0px;
+    margin-bottom: 80px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+input[type="button"]:hover {
+    scale: 1.03;
+    background: linear-gradient(to right, #b620fe, #27ccfd);
+}
+
+
+.link {
+    color: #666;
+    font-size: 13px;
+}
+
+.link a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.error {
+    font-size: 11px;
+    margin-left: 10px;
+    margin-top: 30px;
+    color: red;
+    position: absolute;
+    display: none;
+    max-width: 240px;
+}
+
+@media screen and (max-width : 1024px) {
+    fieldset {
+        width: 40vw;
+    }
+
+    .inputs input[type="text"] {
+        width: 35vw;
+    }
+
+    .link {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width : 425px) {
+    fieldset {
+        width: 70vw;
+    }
+
+    .inputs input[type="text"] {
+        width: 55vw;
+    }
+}
