@@ -258,8 +258,8 @@ async function addTask() {
 
 function editTask(penImg, taskText) {
     penImg.addEventListener('click', async () => {
-        const url = `https://todo-app-back-1.onrender.com/tasks${taskText.innerHTML}`
 
+        const url = `https://todo-app-back-1.onrender.com/tasks/${taskText.innerHTML}`
         let input = document.createElement('input')
         input.type = 'text'
         input.classList.add('input-text')
@@ -283,6 +283,7 @@ function editTask(penImg, taskText) {
                         },
                         body: JSON.stringify(dados)
                     })
+
                     const response = await editTask.json()
 
                     if (response.updateTask) {
